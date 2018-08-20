@@ -1,0 +1,32 @@
+
+    <form (ngSubmit)="onAdd(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="name">Name</label>
+          <input type="text" 
+         
+          name="item_name" 
+          class="form-control" 
+          ngModel
+          required>
+          <!-- [(ngModel)]="itemName" -->
+        </div>
+        <div class="col-sm-2 form-group">
+            <label for="amount">Amount</label>
+            <input type="number" 
+            name="item_amount" 
+            class="form-control" 
+            ngModel
+            required
+            pattern="^[1-9][0-9]*$">
+            <!-- [(ngModel)]="itemAmount" -->
+            
+          </div>
+      </div>
+          <button class="btn btn-success" type="submit" [disabled]="!f.valid">{{editMode ? 'Update' : 'Add'}}</button>
+          <!-- (click)="onAdd()" -->
+          <button class="btn btn-danger" type="button" style="margin-left: 1%"
+          *ngIf="editMode"
+          (click)="deleteItem()">Delete</button>
+          <button class="btn btn-primary" type="button" style="margin-left: 1%" (click)="clearDetails()">Clear</button>
+    </form>

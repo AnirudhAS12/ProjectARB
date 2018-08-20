@@ -1,0 +1,19 @@
+/* .ng-invalid, .ng-touched{
+    border: 1px solid red;
+} */
+
+input.ng-invalid.ng-touched {
+    background-color:pink;
+    border: 1px solid red;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+
+textarea .ng-invalid.ng-touched {
+    background-color:pink;
+    border: 1px solid red;
+}
+input .ng-valid {
+    background-color:lightgreen;
+}
